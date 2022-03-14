@@ -62,3 +62,29 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Join Test
+
+In terminal, run following commands:
+
+#### Copy .env.example to .env and set variables:
+````
+  DB_CONNECTION=mysql
+  DB_HOST=mysql
+  DB_PORT=3306
+  DB_DATABASE=jointest
+  DB_USERNAME=sail
+  DB_PASSWORD=password
+````
+
+#### Set sail up:
+`sail up -d`
+
+#### Run migrations:
+`sail artisan migrate`
+
+#### Run seeders:
+- `sail artisan db:seed --class=CategoriesSeeder`
+- `sail artisan db:seed --class=ProductsSeeder`
+
+#### Open project at localhost
